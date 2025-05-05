@@ -1,0 +1,42 @@
+[tool.poetry]
+name = "src"
+version = "1.0.0"
+description = "LLM Project"
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.13"
+dynaconf = "^3.2.6"
+fastapi = "^0.115.5"
+pydantic = "^2.10.0"
+uvicorn = "^0.32.1"
+httpx = "^0.28.1"
+langchain-openai = "^0.3.16"
+langchain = "^0.3.25"
+python-multipart = "^0.0.20"
+
+[tool.poetry.group.dev.dependencies]
+pip-audit = "^2.7.3"
+pytest = "^8.3.3"
+pytest-cov = "^5.0.0"
+ruff = "0.7.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+extend-select = ["E", "F", "G", "I", "N", "ICN", "T20", "Q", "RSE"]
+
+[tool.pytest.ini_options]
+env = [
+    "ENV_FOR_DYNACONF=testing",
+]
+
+[tool.coverage.run]
+parallel = true
+omit = ["*/__init__.py", "tests/*", "src/config.py", "src/main.py"]
