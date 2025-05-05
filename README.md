@@ -14,12 +14,6 @@ A FastAPI application that provides text summarization capabilities using OpenAI
    docker run -p 8000:8000 -e OPENAI_API_KEY=xxx langchain-summarize-app
    ```
 
-   Or using Docker Compose:
-   ```bash
-   export OPENAI_API_KEY=your_openai_api_key
-   docker-compose up
-   ```
-
 ## Usage
 
 Once the application is running, you can access:
