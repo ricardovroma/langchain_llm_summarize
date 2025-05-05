@@ -1,0 +1,11 @@
+[default]
+APP_NAME = "LLM API"
+LOG_LEVEL = "INFO"
+OPENAI_API_KEY = ""
+LLM_MODEL = "gpt-4o-mini"
+
+[testing]
+
+[development]
+
+[production]
